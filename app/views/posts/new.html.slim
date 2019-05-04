@@ -1,0 +1,8 @@
+h1 私のWikipedia
+= form_tag("./new", method: "post") do  
+  = label_tag(:search, "検索:")
+  = text_field_tag(:search,params[:search])
+  = submit_tag("Search")
+
+h1 = @serch_Text
+
