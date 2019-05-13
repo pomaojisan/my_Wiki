@@ -1,9 +1,17 @@
+require 'wikipedia'
+
+Wikipedia.Configure {
+  domain 'ja.wikipedia.org'
+  path   'w/api.php'
+}
+
 class PostsController < ApplicationController
   def show
     render:new
   end
   def create
-    @serch_Text = params[:search]
+    page = Wikipedia.find( params[:search] )
+    @serch_Text = page.text
     render:new
   end
 

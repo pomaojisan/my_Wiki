@@ -1,8 +1,7 @@
-h1 私のWikipedia
-= form_tag("./new", method: "post") do  
+h1 Wikipediaから検索
+= form_tag("./new", method: "post",remote: true) do  
   = label_tag(:search, "検索:")
   = text_field_tag(:search,params[:search])
   = submit_tag("Search")
 
-h1 = @serch_Text
-
+= render partial: 'form', locals: {serch_Text:@serch_Text}
