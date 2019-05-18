@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  get 'posts/new', to: 'posts#show'
-  post 'posts/new', to: 'posts#create'
+  get 'posts/new', to: 'posts#new'
+  post 'posts', to: 'posts#create'
 end

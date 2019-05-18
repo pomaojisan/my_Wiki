@@ -1,5 +1,5 @@
 h1 Wikipediaから検索
-= form_tag("./new", method: "post",remote: true) do  
+= form_tag("./", method: "post",remote: true) do  
   = label_tag(:search, "検索:")
   = text_field_tag(:search,params[:search])
   = submit_tag("Search")

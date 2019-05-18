@@ -6,13 +6,14 @@ Wikipedia.Configure {
 }
 
 class PostsController < ApplicationController
-  def show
+  def new
     render:new
   end
   def create
     page = Wikipedia.find( params[:search] )
-    @serch_Text = page.text
-    render:new
+    @serch_url = page.fullurl
+    @serch_image_urls = page.main_image_url
+    #render:new
   end
 
 end
